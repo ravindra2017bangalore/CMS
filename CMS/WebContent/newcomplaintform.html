@@ -1,0 +1,234 @@
+.<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Complaint Form</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style type="text/css">
+.btn-default {
+      background: #15224f;
+      color: #fff;
+   }
+  .btn-default:hover {
+      background: #fff;
+      color:#15224f;
+   }
+ 
+ .colorgraph {
+  height: 5px;
+  border-top: 0;
+  background: #c4e17f;
+  border-radius: 5px;
+  background-image: -webkit-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: -moz-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: -o-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+}
+  </style>
+</head>
+<body class="sansserif" style="font-family: Arial,Helvetica,sans-serif;">
+	<div class="container">
+  <div class="page-header">
+    <h1 style="color: #15224f;font-size: 50px">Complaint Form <a href="#">
+          <span class="glyphicon glyphicon-envelope"></span>
+        </a> <a style=" float: right" class="btn btn-default btn-lg" href="admin.html">Home</a>  </h1>
+        
+  </div>
+  <hr class="colorgraph">
+  <div style="background-color: gray; height: 50px">
+    <h3 style="color: white;  padding-top: 13px; padding-left: 20px">Complaint Information</h3>      
+ </div>
+ <div class="form" style=" padding-top: 20px;">
+ <form action="Complaint" method="post" class="form-horizontal">
+ <div class="form-group">
+      <label class="control-label col-sm-3">Type Of Complaint :</label>
+      <div class="col-sm-6">   
+      <select class="form-control selectpicker" name="complainType" id="sel1" required="required">
+        <optgroup label="Cleaning">
+    <option>----Select Problem----</option>    
+    <option>Department(Cleaning)</option>
+    <option>Department Lab(Cleaning)</option>
+    <option>College Entrance(Cleaning)</option>
+    <option>Parking(Cleaning)</option>
+    <option>Garden(Cleaning)</option>
+    <option>Class Room(Cleaning)</option>
+    <option>Canteen(Cleaning)</option>
+    <option>GYM(Cleaning)</option>
+    <option>Mess(Cleaning)</option>
+    <option>Hostel(Cleaning)</option>
+    <option>Library(Cleaning)</option>
+    <option>Toilet(Cleaning)</option>
+  </optgroup>
+  <optgroup label="Water">
+    <option>Wasted(Water)</option>
+    <option>Cooler(Water)</option>
+    <option>Heater(Water)</option>
+    <option>Sanitary Related(Water)</option>
+    <option>Plumbing(Water)</option>
+  </optgroup>
+  <optgroup label="Electricity">
+  <option>Fan(Electricity)</option>
+  <option>Light(Electricity)</option>
+  <option>AC(Electricity)</option>
+  <option>Other(Electricity)</option>
+  </optgroup>
+  <optgroup label="Internet">
+  <option>WiFi Problem(Internet)</option>
+	<option>LAN Problem(Internet)</option>
+	<option>Internet Speed(Internet)</option>
+  </optgroup>
+  <optgroup label="Lab Related">
+  <option>Equipment Related(Lab Related)</option>
+  <option>Other(Lab Related)</option>
+  </optgroup>
+  <optgroup label="Mess">
+  <option>Food(Mess)</option>
+  <option>Other(Mess)</option>
+  </optgroup>
+  <optgroup label="Health & Care">
+  <option>First Aid(Health & Care)</option>
+  <option>GRC for Girls(Health & Care)</option>
+  <option>Emergency Doctor/Ambulance(Health & Care)</option>
+  </optgroup>
+  <optgroup label="Documantation Related">
+  <option>At the time of Enrollment(Documentation)</option>
+  <option>At the time of  Scholarship(Documentation)</option>
+  <option>At Leave College(Documentation)</option>
+  </optgroup>
+  <optgroup label="Garden Maintenance">
+  <option>Garden Maintenance(Garden Maintenance)</option>
+  </optgroup>
+  <optgroup label="Time Table & Exam">
+  <option>Time Table & Exam Related(Time Table & Exam) </option>
+  </optgroup>
+  <optgroup label="Sportes Related">
+  <option>Unavailable of Kit(Sports)</option>
+  <option>Other(Sports)</option>
+  </optgroup>
+  <optgroup label="Training and placement">
+  <option>Training for Student(Training and placement)</option>
+  <option>Placement for Student(Training and placement)</option>
+  <option>Other(Training and placement)</option>
+  </optgroup>
+  <optgroup label="Discipline Related">
+  <option>Discipline(Discipline Related)</option>
+  <option>Other(Discipline Related)</option>
+  </optgroup>
+  <optgroup label="NCC/NSS Problem">
+  <option>NCC and NSS(NCC/NSS )</option>
+  </optgroup>
+  <optgroup label="Bus/Transport Proble">
+  <option>Bus/Transport</option>
+  </optgroup>
+  <optgroup label="Security">
+  <option>Security</option>
+  </optgroup>
+  <optgroup label="Library ">
+  <option>Unavailable Books(Library)</option>
+  <option>Environment Problem(Library)</option>
+  </optgroup>
+  <optgroup label="Scholership">
+  <option>Scholarship</option>
+  </optgroup>
+  <optgroup label="Univercity Related">
+  <option>University Related Problem</option>
+  </optgroup>
+  <optgroup label="Event Related">
+  <option>Proper Management(Event)</option>
+  <option>Other(Event)</option>
+  </optgroup>
+</select>
+
+      </div>
+      </div>
+      <div class="form-group">
+      <label class="control-label col-sm-3">Urgency Of this Complaint :</label>
+      <div class="col-sm-6">   
+      <select class="form-control selectpicker" name="urgency" id="sel1" required="required">
+      <option>High</option>
+      <option>Low</option>
+      </select>
+      </div>
+      </div>
+      
+      <div style="background-color: gray; height: 50px">
+    <h3 style="color: white; padding-top: 13px; padding-left: 20px">Reporting Parties Information :</h3>      
+ </div>
+ <div class="form-group" style=" padding-top: 20px;">
+      <label class="control-label col-sm-3" >Your Full Name:</label>
+      <div class="col-sm-6">
+        <input type="text" name="name"class="form-control" id="fname" placeholder="Enter First Name" required="required">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-3">Select Role :</label>
+      <div class="col-sm-6">   
+      <select class="form-control selectpicker" name="role" id="sel1" required="required">
+      <option>----Select Role----</option>
+      <option>Faculty</option>
+      <option>Student</option>
+      <option>Other</option>
+      </select>
+      </div>
+      </div>
+      <div class="form-group">
+      <label class="control-label col-sm-3" >Mobile No. :</label>
+      <div class="col-sm-6">
+        <input type="text" name="mobileno"class="form-control" id="fname" placeholder="Mobile Number" required="required">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-3" >Aadhar No. :</label>
+      <div class="col-sm-6">
+        <input type="text" name="aadhar"class="form-control" id="fname" placeholder="Aadhar Number" required="required">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-3" >Email Id :</label>
+      <div class="col-sm-6">
+        <input type="text" name="email"class="form-control" id="fname" placeholder="Email Address" required="required">
+      </div>
+    </div>
+    <div>
+    <label class="control-label col-sm-10" style="color: red;">**&nbsp;If You are faculty and Student than Select Department/Branch Other wise left.</label>
+    </div>
+    <br>
+    <div class="form-group">
+      <label class="control-label col-sm-3">Department/Branch :</label>
+      <div class="col-sm-6">   
+      <select class="form-control selectpicker" name="branch" id="sel1" required="required">
+      <option>---Select Branch---</option>
+      <option>AE</option>
+      <option>CSE</option>
+      <option>ME</option>
+      <option>EE</option>
+      <option>ECE</option>
+      <option>CE</option>
+      <option>MCA</option>
+      <option>MBA</option>
+      </select>
+      </div>
+      </div>
+    <div style="background-color: gray; height: 50px">
+    <h3 style="color: white; padding-top: 13px; padding-left: 20px">Complaint Information :</h3>      
+ </div>
+ <div class="form-group" style=" padding-top: 20px;">
+ <label class="control-label col-sm-3">Please Provide a Summary of your Complaint. Provide as Much Detail as Possible.</label>
+    <div class="col-sm-6">
+    <textarea class="form-control" id="comments" name="description" placeholder="Description " rows="5" required="required"></textarea>
+    </div>
+    </div>
+    <hr class="colorgraph">
+    <center>
+    <button type="submit" class="btn btn-default btn-lg">Submit Complaint</button>
+    
+ </center>
+ </form>
+ </div>
+	</div>
+	
+</body>
+</html>

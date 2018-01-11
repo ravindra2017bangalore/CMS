@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<title>Profile</title>
+<style>
+.btn-default {
+      background: #15224f;
+      color: #fff;
+   }
+  .btn-default:hover {
+      background: #fff;
+      color:#15224f;
+   }
+   body.sansserif {
+    font-family: Arial, Helvetica, sans-serif;
+</style>
+</head>
+<body>
+
+  <div class="jumbotron text-center">
+  <h1 style="color: #15224f">Faculty Profile</h1> 
+  <p style="color: gray;">In This Page Student/Faculty Can View the Complains and Can Give New Complains here Related to Department. </p> 
+</div>
+
+  <div class="container">
+ 
+  <ul class="nav nav-tabs">
+    
+    
+    <li class="active"><a data-toggle="tab" href="#studentregistration">Student Registration</a></li>
+     <li class="dropdown">
+      <a data-toggle="tab" class="dropdown-toggle" data-toggle="dropdown" href="#">View Complains<span class="caret"></span></a>
+      <ul class="dropdown-menu">
+        <li><a href="#">Today Complains</a></li>
+        <li><a href="#">All Complains</a></li>                        
+      </ul>
+    </li>
+    <li><a data-toggle="tab"  href="#changepassword">Change Password</a></li>
+    <li><a href="LogoutServlet">LogOut</a></li>
+  </ul>
+  
+  
+  <!-- Change Password -->
+  <div class="tab-content">
+  	<div id="changepassword" class="tab-pane fade">
+  		<form class="form-horizontal" action="GetPassword" method="post">
+    <div class="form-group" style="margin-top: 20px">
+      <label class="control-label col-sm-3" for="email">Current Password :</label>
+      <div class="col-sm-4">
+        <input type="text" name="current_password"class="form-control"  placeholder="Enter Current Password">
+      </div>
+      
+    </div>
+    
+    <div class="form-group" style="margin-top: 20px">
+      <label class="control-label col-sm-3" >New Password :</label>
+      <div class="col-sm-4">
+        <input type="text" name="new_password"class="form-control"  placeholder="Enter New Password">
+      </div>
+      </div>
+      <div class="form-group" style="margin-top: 20px">
+      <label class="control-label col-sm-3" >Confirm Password :</label>
+      <div class="col-sm-4">
+        <input type="text" name="confirm_password"class="form-control"  placeholder="Enter Confirm Password">
+      </div>
+    </div>
+    <center>
+    <input type="submit" class="btn btn-default btn-lg"value="Submit"/>
+ </center>
+    </form>
+  	</div>
+  <!-- student registration -->
+  <div id="studentregistration" class="tab-pane fade in active">
+    <div class="container">
+  <div class="page-header">
+    <h1 style="color: #15224f;font-size: 50px">Student Registration <a href="#">
+          <span class="glyphicon glyphicon-envelope"></span>
+        </a>  </h1>
+        <div style="background-color: gray; height: 50px">
+    <h3 style="color: white;  padding-top: 13px; padding-left: 20px">Student Information</h3>      
+ </div>
+    <div class="form" style=" padding-top: 20px;">
+    <form action="StdRegistration" method="post" class="form-horizontal">
+    <div class="form-group" style=" padding-top: 20px;">
+      <label class="control-label col-sm-3" >Name of Student:</label>
+      <div class="col-sm-6">
+        <input type="text" name="studentname"class="form-control" id="fname" placeholder="Enter Student Name" required="required">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-3" >Date Of Birth:</label>
+      <div class="col-sm-6">
+        <input type="text" name="dob"class="form-control" id="fname" placeholder="DD/MM/YYYY" required="required">
+      </div>
+    </div>
+    <div class="form-group">
+    <label class="control-label col-sm-3" >Gender:</label>
+    	<label class="radio-inline">
+      &nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" value="male" name="gender">Male
+    </label>
+    <label class="radio-inline">
+      <input checked="checked" type="radio" value="female" name="gender">Female
+    </label>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-3">Department/Branch :</label>
+      <div class="col-sm-6">   
+      <select class="form-control" name="branch" id="sel1">
+        <option>---Select Branch---</option>
+        <option>CES</option>
+        <option>ME</option>
+        <option>Civil</option>
+        <option>EE</option>
+        <option>ECE</option>
+        <option>AE</option>
+        <option>MBA</option>
+        <option>MCA</option>
+      </select>
+      </div>
+      </div>
+      <div class="form-group">
+      <label class="control-label col-sm-3" >Mobile No. :</label>
+      <div class="col-sm-6">
+        <input type="text" name="mobile"class="form-control" id="fname" placeholder="Enter Mobile Number" required="required">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-3" >Aadhar No. :</label>
+      <div class="col-sm-6">
+        <input type="text" name="aadhar"class="form-control" id="fname" placeholder="Enter Aadhar Number" required="required">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-3" >Email Id :</label>
+      <div class="col-sm-6">
+        <input type="text" name="email"class="form-control" id="fname" placeholder="Enter Email Address" required="required">
+      </div>
+    </div>
+    <center>
+    <input type="submit" class="btn btn-default btn-lg" value="Click to Register"/>
+ </center>
+    </form>    
+        
+        
+        
+        </div>
+  </div>
+  </div>
+  
+  </div>
+  </div>
+  </div>
+</body>
+</html>

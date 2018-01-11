@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Admin Home Page</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+		
+			<style>
+			.colorgraph {
+  height: 5px;
+  border-top: 0;
+  background: #c4e17f;
+  border-radius: 5px;
+  background-image: -webkit-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: -moz-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: -o-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+}
+.nav-tabs li a {
+    color: #15224f;
+}
+h2{
+color:#15224f;
+}
+</style>
+
+		
+</head>
+<body>
+
+<div class="jumbotron text-center">
+  <h1 style="color: #15224f">Admin Profile</h1>
+ 
+</div>
+<div class="container">
+<ul class="nav nav-tabs">
+  <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
+  <li><a data-toggle="tab" href="#workerregistration">New Worker Registration</a></li>
+  <li><a data-toggle="tab" href="#facregistration">New Faculty Registration</a></li>
+  <li> <button class=" btn btn-primary dropdown-toggle" data-toggle="dropdown">View Complaint</button>
+  <span Class="caret"></span>
+  <ul class="dropdown-menu">
+  <li><a href="viewstdcomplaint.jsp"></a>Student</li>
+  <li><a href="viewfaccomplaint.jsp"></a>Faculty</li>
+  <li><a href="viewothcomplaint.jsp"></a>Other</li>
+  </ul>
+  </li>
+  <li><a href="LogoutServlet">LogOut</a></li>
+</ul>
+
+<div class="tab-content">
+  <div id="home" class="tab-pane fade in active">
+    <h2>Home Description.</h2>
+    <p></p>
+  </div>
+  <div id="facregistration" class="tab-pane fade">
+    <center><h2>Faculty Registration </h2></center>
+    <hr class="colorgraph">
+    
+    <form action="newfregistration" class="form-horizontal" method="post">
+    <div class="form-group">
+      <label class="control-label col-sm-2">Designation :</label>
+      <div class="col-sm-6">   
+      <select class="form-control" name="designation" id="sel1">
+        <option>---Select---</option>
+        <option>Adv.</option>
+        <option>HOD</option>
+        <option>Asst. Prof.</option>
+      </select>
+      </div>
+      </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" >First Name:</label>
+      <div class="col-sm-6">
+        <input type="text" name="fname"class="form-control" id="fname" placeholder="Enter First Name" required="required">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" >Middle Name:</label>
+      <div class="col-sm-6">
+        <input type="text" name="mname"class="form-control" id="fname" placeholder="Enter Middle Name"required="required">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" >Last Name:</label>
+      <div class="col-sm-6">
+        <input type="text" name="lname"class="form-control" id="fname" placeholder="Enter Last Name" required="required">
+      </div>
+    </div>
+     <div class="form-group">
+      <label class="control-label col-sm-2" >Date Of Birth:</label>
+      <div class="col-sm-6">
+        <input type="text" name="dob"class="form-control" id="fname" placeholder="DD/MM/YYYY" required="required">
+      </div>
+    </div>
+    <div class="form-group">
+    <label class="control-label col-sm-2" >Gender:</label>
+    	<label class="radio-inline">
+      &nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" value="male" name="gender">Male
+    </label>
+    <label class="radio-inline">
+      <input checked="checked" type="radio" value="female" name="gender">Female
+    </label>
+    </div>
+    <div class="form-group">
+    <label class="control-lable col-sm-2">Address:</label>
+    <div class="col-sm-6">
+    <textarea class="form-control" id="comments" name="address" placeholder="Address" rows="5" required="required"></textarea>
+    </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2">City :</label>
+      <div class="col-sm-6">   
+      <select class="form-control" name="city" id="sel1">
+        <option>----Select City----</option>
+        <option>Ajmer</option>
+        <option>Alwar</option>
+        <option>Bhilwara</option>
+        <option>Chittorgarh</option>
+        <option>Udaipur</option>
+      </select>
+      </div>
+      </div>
+      <div class="form-group">
+      <label class="control-label col-sm-2">State :</label>
+      <div class="col-sm-6">   
+      <select class="form-control" name="state" id="sel1">
+        <option>----Select State----</option>
+        <option>Rajasthan</option>
+      </select>
+      </div>
+      </div>
+      <div class="form-group">
+      <label class="control-label col-sm-2" >Email Id:</label>
+      <div class="col-sm-6">
+        <input type="text" name="email"class="form-control" id="fname" placeholder="Enter Email Id" required="required">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" >Mobile No.:</label>
+      <div class="col-sm-6">
+        <input type="text" name="mobile"class="form-control" id="fname" placeholder="Enter Mobile Number" required="required">
+      </div>
+      </div>
+      <div class="form-group">
+      <label class="control-label col-sm-2" >Password:</label>
+      <div class="col-sm-6">
+        <input type="password" name="pass"class="form-control" id="fname" placeholder="Enter Mobile Number" required="required">
+      </div>
+      </div>
+      <div class="form-group">
+      <label class="control-label col-sm-2" >ReEnter Password:</label>
+      <div class="col-sm-6">
+        <input type="text" name="repass"class="form-control" id="fname" placeholder="Enter Mobile Number" required="required">
+      </div>
+      </div>
+      <div class="form-group">
+    <label class="control-label col-sm-2" >Qualification:</label>
+    	<label class="radio-inline">
+      &nbsp;&nbsp;&nbsp;&nbsp;<input checked="checked" type="radio" value="btech" name="qualification">B.E/B.Tech
+    </label>
+    <label class="radio-inline">
+      <input  type="radio" value="mtech" name="qualification">M.Tech
+    </label>
+    <label class="radio-inline">
+      <input type="radio" value="MBA" name="qualification">MBA
+    </label>
+    <label class="radio-inline">
+      <input type="radio" value="MBA(HR)" name="qualification">MBA(HR)
+    </label>
+    <label class="radio-inline">
+      <input type="radio" value="MBA(IT)" name="qualification">MBA(IT)
+    </label>
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline">
+      <input type="radio" value="MCA" name="qualification">MCA
+    </label>
+    <label class="radio-inline">
+      <input type="radio" value="PHD" name="qualification">PHD
+    </label>
+    <label class="radio-inline">
+      <input type="radio" value="Post Graduate(English)" name="qualification">Post Graduate(English)
+    </label>
+    <label class="radio-inline">
+      <input type="radio" value="Post Graduate(Management)" name="qualification">Post Graduate(Management)
+    </label>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" >Aadhar No.:</label>
+      <div class="col-sm-6">
+        <input type="text" name="aadhar"class="form-control" id="fname" placeholder="Enter Aadhar Name" required="required">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2">Select Branch :</label>
+      <div class="col-sm-6">   
+      <select class="form-control" name="branch" id="sel1">
+        <option>---Select---</option>
+        <option>CSE</option>
+        <option>ME</option>
+        <option>EE</option>
+        <option>Civil</option>
+        <option>Auto</option>
+      </select>
+      </div>
+      </div>
+      <hr class="colorgraph">
+      <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-default">SUBMIT</button>
+        <button class="btn btn-default">CLEAR</button>
+      </div>
+      </div>
+    </form>
+   
+  </div>
+  
+  
+  <!-- Worker Registration is start here... -->
+  <div id="workerregistration" class="tab-pane fade">
+    <center><h2>Worker Registration </h2></center>
+    <hr class="colorgraph">
+    <form action="NewWorkerRegistration" method="post" class="form-horizontal">
+    <div class="form-group">
+      <label class="control-label col-sm-2">Worker Post :</label>
+      <div class="col-sm-6">   
+      <select class="form-control" name="workerpost" id="sel1">
+        <option>---Select Post---</option>
+        <option>Cleaning</option>
+        <option>Water</option>
+        <option>Civil</option>
+        <option>A/C</option>
+        <option>Internet</option>
+        <option>Sports</option>
+        <option>Placement/Training</option>
+        <option>Department</option>
+        <option>Canteen</option>
+        <option>GYM</option>
+        <option>Hostel</option>
+        <option>Food</option>
+        <option>Electricity</option>
+        <option>Documentation</option>
+      </select>
+      </div>
+      </div>
+   <div class="form-group">
+      <label class="control-label col-sm-2" >First Name:</label>
+      <div class="col-sm-6">
+        <input type="text" name="fname"class="form-control" id="fname" placeholder="Enter First Name" required="required">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" >Middle Name:</label>
+      <div class="col-sm-6">
+        <input type="text" name="mname"class="form-control" id="fname" placeholder="Enter Middle Name"required="required">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" >Last Name:</label>
+      <div class="col-sm-6">
+        <input type="text" name="lname"class="form-control" id="fname" placeholder="Enter Last Name" required="required">
+      </div>
+    </div>
+    <div class="form-group">
+    <label class="control-lable col-sm-2">Address:</label>
+    <div class="col-sm-6">
+    <textarea class="form-control" id="comments" name="address" placeholder="Address" rows="5" required="required"></textarea>
+    </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2">City :</label>
+      <div class="col-sm-6">   
+      <select class="form-control" name="city" id="sel1">
+        <option>---Select---</option>
+        <option>Ajmer</option>
+        <option>Alwar</option>
+        <option>Bhilwara</option>
+        <option>Chittorgarh</option>
+        <option>Udaipur</option>
+      </select>
+      </div>
+      </div>
+      <div class="form-group">
+      <label class="control-label col-sm-2">State :</label>
+      <div class="col-sm-6">   
+      <select class="form-control" name="state" id="sel1">
+        <option>---Select---</option>
+        <option>Rajasthan</option>
+      </select>
+      </div>
+      </div>
+          <div class="form-group">
+      <label class="control-label col-sm-2" >Mobile No.:</label>
+      <div class="col-sm-6">
+        <input type="text" name="mobile"class="form-control" id="fname" placeholder="Enter Mobile Number" required="required">
+      </div>
+    </div>
+        <div class="form-group">
+      <label class="control-label col-sm-2" >Aadhar No.:</label>
+      <div class="col-sm-6">
+        <input type="text" name="aadhar"class="form-control" id="fname" placeholder="Enter Aadhar Name" required="required">
+      </div>
+    </div>
+        <div class="form-group">
+      <label class="control-label col-sm-2" >Email Id:</label>
+      <div class="col-sm-6">
+        <input type="text" name="email"class="form-control" id="fname" placeholder="Enter Email Id" required="required">
+      </div>
+    </div>
+        <div class="form-group">
+      <label class="control-label col-sm-2" >Date Of Birth:</label>
+      <div class="col-sm-6">
+        <input type="text" name="dob"class="form-control" id="fname" placeholder="DD/MM/YYYY" required="required">
+      </div>
+    </div>
+    <div class="form-group">
+    <label class="control-label col-sm-2" >Gender:</label>
+    	<label class="radio-inline">
+      &nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" value="male" name="gender">Male
+    </label>
+    <label class="radio-inline">
+      <input checked="checked" type="radio" value="female" name="gender">Female
+    </label>
+    </div>
+    <hr class="colorgraph">
+    <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-default">SUBMIT</button>
+      </div>
+      </div>
+    </form>
+  </div>
+  </div>
+</div>
+
+</body>
+
+</body>
+</html>

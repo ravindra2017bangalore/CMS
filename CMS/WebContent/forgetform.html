@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+<title>Forget Password Form</title>
+</head>
+<body>
+	
+  <div class="jumbotron text-center">
+  <h1 style="color: #15224f">Forget Password Process</h1> 
+  
+</div>
+  <div class="container">
+  <center>
+		<form class="form-inline" action="forgetservlet" method="post">
+    <div class="input-group" style="margin-top: 60px">
+        <input type="text" size="50" name="forget_email"class="form-control input-lg" id="email" placeholder="Email Address" required>
+         <div class="input-group-btn">        
+        <button type="submit" class="btn btn-danger btn-lg">Search</button>
+      </div>
+    </div>
+  </form>
+  </center>
+  </div>
+</body>
+</html>
